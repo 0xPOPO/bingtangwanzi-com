@@ -72,61 +72,62 @@
   --social-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.24);
   --social-ink: var(--ink);
 }
-body.template-personal-brand-lime-ledger {
+body.template-personal-brand-editorial-print {
 
   color-scheme: light;
-  --accent: #9fe870;
+  --accent: #057dbc;
   --action-bg: #ffffff;
-  --action-border: #d9e5d2;
-  --ambient: linear-gradient(180deg, #e8ebe6 0 260px, #ffffff 260px 100%);
-  --avatar-size: 112px;
-  --bio-ink: #454745;
+  --action-border: #000000;
+  --ambient: none;
+  --avatar-size: 96px;
+  --bio-ink: #222222;
   --canvas: #ffffff;
-  --card-bg: #f4faef;
-  --card-border: #d9e5d2;
-  --card-shadow: rgba(14, 15, 12, 0.1) 0 24px 62px;
-  --cta-bg: #9fe870;
-  --cta-bg-hover: #cdffad;
-  --cta-border: #9fe870;
-  --cta-ink: #0e0f0c;
-  --headline-size: 68px;
-  --headline-size-mobile: 40px;
-  --headline-weight: 900;
-  --ink: #0e0f0c;
+  --card-bg: #ffffff;
+  --card-border: #000000;
+  --card-shadow: none;
+  --cta-bg: #000000;
+  --cta-bg-hover: #252525;
+  --cta-border: #000000;
+  --cta-ink: #ffffff;
+  --display-font: Georgia, "Times New Roman", serif;
+  --headline-size: 76px;
+  --headline-size-mobile: 44px;
+  --headline-weight: 400;
+  --ink: #000000;
   --link-bg: #ffffff;
-  --link-bg-hover: #e2f6d5;
-  --link-border: #d9e5d2;
-  --link-gap: 10px;
-  --link-icon-bg: #e2f6d5;
-  --link-icon-bg-hover: #9fe870;
-  --link-icon-ink-hover: #0e0f0c;
-  --link-meta: #454745;
-  --link-shadow-hover: 0 14px 30px rgba(159, 232, 112, 0.24);
-  --meta-bg: #e2f6d5;
-  --meta-border: #c5edab;
-  --muted: #454745;
+  --link-bg-hover: #f4f4f4;
+  --link-border: #000000;
+  --link-gap: 0;
+  --link-icon-bg: #ffffff;
+  --link-icon-bg-hover: #057dbc;
+  --link-icon-ink-hover: #ffffff;
+  --link-meta: #5c5c5c;
+  --link-shadow: none;
+  --link-shadow-hover: none;
+  --meta-bg: #f4f4f4;
+  --meta-border: #000000;
+  --muted: #5c5c5c;
   --panel-bg: #ffffff;
-  --panel-border: #d9e5d2;
-  --panel-padding: 18px;
-  --profile-bg: #ffffff;
-  --profile-border: #d9e5d2;
-  --profile-button-outset: 20px;
-  --profile-padding: 22px 20px;
-  --radius-action: 999px;
-  --radius-avatar: 24px;
-  --radius-card: 18px;
-  --radius-panel: 24px;
-  --section-gap: 15px;
-  --shell-padding-block: 44px 34px;
-  --shell-width: 780px;
-  --surface: #e8ebe6;
+  --panel-border: #000000;
+  --panel-padding: 0;
+  --profile-bg: transparent;
+  --profile-border: transparent;
+  --profile-padding: 0 0 18px;
+  --radius-action: 0;
+  --radius-avatar: 0;
+  --radius-card: 0;
+  --radius-panel: 0;
+  --section-gap: 18px;
+  --shell-padding-block: 38px 30px;
+  --shell-width: 920px;
+  --surface: #ffffff;
   --social-bg: #ffffff;
-  --social-border: #d9e5d2;
-  --social-hover-bg: #9fe870;
-  --social-hover-border: #9fe870;
-  --social-hover-ink: #0e0f0c;
-  --social-ink: #0e0f0c;
-  --surface-2: #e2f6d5;
+  --social-border: #000000;
+  --social-hover-bg: #057dbc;
+  --social-hover-border: #057dbc;
+  --social-hover-ink: #ffffff;
+  --social-ink: #000000;
+  --surface-2: #f5f5f5;
   --cta-ink-hover: var(--cta-ink);
   --cta-icon-bg: color-mix(in srgb, var(--cta-ink), transparent 86%);
   --cta-icon-border: color-mix(in srgb, var(--cta-ink), transparent 72%);
@@ -308,12 +309,19 @@ footer span,
 }
 h1 {
   font-family: var(--display-font);
-  font-size: var(--headline-size);
+  font-size: min(var(--headline-size), 44px);
   font-weight: var(--headline-weight);
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
   overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+h1.headline-medium {
+  font-size: min(var(--headline-size), 40px);
+}
+h1.headline-long {
+  font-size: min(var(--headline-size), 34px);
 }
 .bio {
   color: var(--bio-ink, #d0d6e0);
@@ -841,7 +849,14 @@ footer a:hover {
     width: min(calc(100% - 24px), var(--shell-width));
   }
   h1 {
-    font-size: var(--headline-size-mobile);
+    font-size: min(var(--headline-size-mobile), 30px);
+    line-height: 1.1;
+  }
+  h1.headline-medium {
+    font-size: min(var(--headline-size-mobile), 28px);
+  }
+  h1.headline-long {
+    font-size: min(var(--headline-size-mobile), 25px);
   }
   .profile-card {
     padding: max(18px, calc(var(--card-padding) - 8px));
